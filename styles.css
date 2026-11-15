@@ -87,7 +87,7 @@ h2, h3 { font-weight: 300; line-height: 1.1; margin: 0; }
 .product:first-of-type { margin-top: clamp(24px, 4vw, 48px); }
 .product:nth-of-type(even) .panel { order: 2; }
 .panel { margin: 0; aspect-ratio: 4 / 3; display: grid; place-items: center; background: var(--panel-bg, var(--asphalt)); transition: background-color .25s; }
-.panel svg { width: 72%; height: auto; }
+.panel svg { width: 80%; height: auto; }
 .info h3 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin-bottom: .4em; }
 .price { font-size: 1.5rem; margin: .2em 0 .8em; }
 .price span, .gift-price span { display: block; font-size: 1rem; color: var(--fog); }
@@ -96,11 +96,11 @@ h2, h3 { font-weight: 300; line-height: 1.1; margin: 0; }
 .btn.notify { padding: 1em 1.5em; border-bottom: 0; }
 .btn-dark.notify:hover { color: var(--chalk); }
 
-.cap-fig[data-color="asphalt"] { --panel-bg: var(--chalk); --crown: #1F2023; --brim: #0B0C0E; --stripe: #00D9FF; }
-.cap-fig[data-color="chalk"] { --panel-bg: var(--asphalt); --crown: #F2F0EB; --brim: #D9D6CE; --stripe: #00A9CC; }
-.cap-fig[data-color="blue"] { --panel-bg: var(--asphalt); --crown: #00D9FF; --brim: #00B8DB; --stripe: #0B0C0E; }
-.cap-fig .crown { fill: var(--crown); } .cap-fig .brim { fill: var(--brim); } .cap-fig .stripe { stroke: var(--stripe); }
-.cap-fig path, .cap-fig line { transition: fill .25s, stroke .25s; }
+.cap-fig[data-color="asphalt"] { --panel-bg: var(--chalk); --crown: #1F2023; --brim: #0B0C0E; --stripe: #00D9FF; --seam: rgba(255, 255, 255, .22); }
+.cap-fig[data-color="chalk"] { --panel-bg: var(--asphalt); --crown: #F2F0EB; --brim: #DAD6CD; --stripe: #00A9CC; --seam: rgba(0, 0, 0, .22); }
+.cap-fig[data-color="blue"] { --panel-bg: var(--asphalt); --crown: #00D9FF; --brim: #00B4D6; --stripe: #0B0C0E; --seam: rgba(0, 0, 0, .26); }
+.cap-fig .crown { fill: var(--crown); } .cap-fig .brim, .cap-fig .band { fill: var(--brim); } .cap-fig .stripe { stroke: var(--stripe); } .cap-fig .seam { stroke: var(--seam); }
+.cap-fig path, .cap-fig ellipse { transition: fill .25s, stroke .25s; }
 .socks-fig { --panel-bg: var(--blue); }
 
 .swatches { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: .2em 0 1em; }
