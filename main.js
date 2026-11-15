@@ -25,6 +25,10 @@ const swatches = document.querySelectorAll('.swatch');
 swatches.forEach((button) => {
   button.addEventListener('click', () => {
     capFigure.dataset.color = button.dataset.color;
+    const names = { asphalt: 'Asphalt', chalk: 'Chalk', blue: 'Grid Blue' };
+    const picture = capFigure.querySelector('img');
+    picture.src = `img/cap-${button.dataset.color}.jpg`;
+    picture.alt = `3D render of the cycling cap in ${names[button.dataset.color]} with one line around the crown`;
     swatches.forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
   });
 });
